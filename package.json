@@ -1,12 +1,12 @@
 {
   "name": "@mob-on/react-i18n",
   "license": "MIT",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A library to use translations using locales in react projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "source": "index.ts",
+  "source": "src/index.ts",
   "files": [
     "./dist"
   ],
