@@ -1,7 +1,7 @@
 import { Button, Col, Modal, Row } from "react-bootstrap";
-import useSelectedLocale from "../hooks/translation/useSelectedLocale";
+import { useSelectedLocale } from "../hooks/translation/useSelectedLocale";
 import { useTranslation } from "../hooks/translation/useTranslation";
-import i18n from "../i18n/i18n";
+import { i18n } from "../i18n";
 
 interface LocaleSwitcherProps {
   show: boolean;
@@ -9,7 +9,11 @@ interface LocaleSwitcherProps {
   children: React.ReactNode;
 }
 
-const LocaleSwitcher = ({ show, hide, children }: LocaleSwitcherProps) => {
+export const LocaleSwitcher = ({
+  show,
+  hide,
+  children,
+}: LocaleSwitcherProps) => {
   const { t } = useTranslation();
   const locales = i18n.locales;
   const { locale: currentLocale, changeLocale } = useSelectedLocale();

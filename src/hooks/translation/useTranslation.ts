@@ -3,8 +3,8 @@ import Mustache from "mustache";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import sanitizeHtml from "sanitize-html";
-import i18n from "../../i18n/i18n";
-import useSelectedLocale from "./useSelectedLocale";
+import { i18n } from "../../i18n/i18n";
+import { useSelectedLocale } from "./useSelectedLocale";
 
 /**
  * Provides the t() function which returns the value stored for this given key (e.g. "ui.headline")
@@ -13,7 +13,7 @@ import useSelectedLocale from "./useSelectedLocale";
  * In case there is no entry for this key, it returns the key.
  * @returns t(key: string): any function
  */
-const useTranslation = () => {
+export const useTranslation = () => {
   const { locale } = useSelectedLocale();
 
   const enrich = (object) => {
@@ -65,5 +65,3 @@ const useTranslation = () => {
     },
   };
 };
-
-export { useTranslation };
