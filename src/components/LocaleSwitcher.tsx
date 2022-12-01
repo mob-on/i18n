@@ -2,6 +2,7 @@ import { Button, Col, Modal, Row } from "react-bootstrap";
 import { useSelectedLocale } from "../hooks/translation/useSelectedLocale";
 import { useTranslation } from "../hooks/translation/useTranslation";
 import { i18n } from "../i18n";
+import Flag from "./Flag";
 
 interface LocaleSwitcherProps {
   show: boolean;
@@ -44,10 +45,10 @@ export const LocaleSwitcher = ({
                       disabled={selected}
                     >
                       <div className="d-flex align-items-center">
-                        {country}
+                        <Flag id={country} />
                         <span className="ms-2">{localeName}</span>
                       </div>
-                      {selected && <span>Selected</span>}
+                      {selected && <span>✔️</span>}
                     </Button>
                   </Col>
                 );
