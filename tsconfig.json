@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "declaration": true,
     "declarationDir": "dist",
+    "declarationMap": true,
     "incremental": true
   },
   "include": ["src", "src/index.ts"],
