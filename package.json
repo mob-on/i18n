@@ -1,0 +1,57 @@
+{
+  "name": "@mob-on/react-i18n",
+  "license": "MIT",
+  "version": "1.0.2",
+  "description": "A library to use translations using locales in react projects",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "source": "index.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "pub": "yarn build && yarn pubNpm && yarn pubGithub",
+    "pubNpm": "npm publish --@mob-on:registry=https://registry.npmjs.org --access public",
+    "pubGithub": "npm publish --@mob-on:registry=https://npm.pkg.github.com --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mob-on/react-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mob-on/react-i18n/issues"
+  },
+  "homepage": "https://github.com/mob-on/react-i18n#readme",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "rollup": "^3.5.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "html-react-parser": "^3.0.4",
+    "mustache": "^4.2.0",
+    "next": "^13.0.5",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "^18.2.0",
+    "sanitize-html": "^2.7.3"
+  },
+  "packageManager": "yarn@3.3.0"
+}
