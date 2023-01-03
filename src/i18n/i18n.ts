@@ -63,4 +63,13 @@ export const i18n = {
     const localeToFind = sanitizeLocale(locale);
     return !!locales.find((l) => l === localeToFind);
   },
+  mergeTranslations: (
+    translations: Map<string, Object>,
+    secondTranslations: Map<string, object>,
+    prefix: string,
+  ) => {
+    for (const [key, value] of Object.entries(translations)) {
+      value[prefix] = secondTranslations[key];
+    }
+  },
 };
